@@ -1,0 +1,31 @@
+.logo-header {
+    height: 40px;
+    width: 170px;
+}
+a {
+    text-decoration: none;
+}
+li.nav-item>a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+}
+.top-form {
+    padding: 10px 0px;
+}
+.content-area .container {
+    padding: 0px 11%;
+}
+#comments-form {
+    padding-bottom: 100px;
+}
+.error {
+    font-size: 14px;
+}
+.star > label:after{
+    color: red;
+    content: "*";
+    margin-left:10px;
+}
+
