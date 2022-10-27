@@ -56,12 +56,6 @@ document.getElementsByClassName("button-submit")[0].onclick =
             document.getElementsByClassName("form-check-label")[4].style.color = "red";
             error_apply_class.style.display = "block";
         }
-        // if (!(customfile.files.length>2)||!(customfile.files.length<=10)) {
-        //     error_custom_file.style.display = "block";
-        // }
-        // if (!customfile.files.length) {
-        //     error_custom_file.style.display = "block";
-        // }
     }
 function valid_firstname() {
     if (first_name.value) {
@@ -115,20 +109,6 @@ function valid_a_radio() {
         error_apply_class.style.display = "none";
     }
 }
-
-
-// Array.prototype.forEach.call(document.getElementsByClassName("check-box"),function (element ) {
-//         element.onchange =
-//     function(){
-//         if(element.checked) {
-//             document.getElementsByClassName("form-check-label")[0].style.color = "black";
-//             document.getElementsByClassName("form-check-label")[1].style.color = "black";
-//             document.getElementsByClassName("form-check-label")[2].style.color = "black";
-//             error_gender.style.display = "none";
-//         }}
-        
-//     });
-    
     let gender_by_checkbox = document.getElementsByClassName("check-box")
     for (let i=0; i<gender_by_checkbox.length; i++){
     gender_by_checkbox[i].onchange =
@@ -168,6 +148,17 @@ function show_list(arr){
         div_element.append(stt, file_name, file_size, button_delete)
     })
 }
+function delete_allfile(list_file){
+    while(list_file.hasChildNodes()){
+        list_file.removeChild(list_file.firstChild);
+    }
+}
+function delete_file(kt){
+    arr.splice(kt,1)
+    delete_allfile(list_file);
+    show_list(arr);
+}
+
 chooseFile.onchange =
     function (){
         if(chooseFile.files.length !=0){
@@ -176,39 +167,5 @@ chooseFile.onchange =
         }
         delete_allfile(list_file);
         show_list(arr);
+    }
 
-        // while(list_file.hasChildNodes()){
-        //     list_file.removeChild(list_file.firstChild);
-        // }
-        // arr.forEach(function(value,index){
-        //     const div_element = document.createElement("div");
-        //     const stt = document.createElement("p");
-        //     const file_name = document.createElement("p");
-        //     const file_size = document.createElement("p");
-        //     const button_delete = document.createElement("button");
-        //     div_element.className="d-flex";
-        //     stt.className="px-3";
-        //     file_name.className="px-3";
-        //     file_size.className="px-3";
-        //     button_delete.setAttribute("onclick","delete_file(" + index + ")");
-        //     stt.innerHTML = index+1 +".";
-        //     file_name.innerHTML = "File Name: "+ value.name;
-        //     if((value.size/1024).toFixed()>100){
-        //         div_element.className="d-flex text-danger";
-        //     }
-        //     file_size.innerHTML = "Size: "+ (value.size/1024).toFixed() +" (kb)";
-        //     button_delete.innerHTML = "x";
-        //     list_file.append(div_element)
-        //     div_element.append(stt, file_name, file_size, button_delete)
-        // })
-    }
-function delete_file(kt){
-    arr.splice(kt,1)
-    delete_allfile(list_file);
-    show_list(arr);
-}
-function delete_allfile(list_file){
-    while(list_file.hasChildNodes()){
-        list_file.removeChild(list_file.firstChild);
-    }
-}
