@@ -50,6 +50,14 @@ $(document).ready(()=>{
             $("#error-select-section").html("");
         }
     })
+    $("choose-file").change(function(){
+        showvalues();
+    })
 });
-
+function showvalues(){
+        var fields = $('#choose-file').serializeArray();
+        jQuery.each( fields, function( i, field ) {
+            $("#list-file").append( field.value + " " );
+          });
+}
 

@@ -23,9 +23,21 @@ li.nav-item>a {
 .error {
     font-size: 14px;
 }
-.star > label:after{
+/* .star > label:after{
     color: red;
     content: "*";
     margin-left:10px;
-}
+} */
 
+label.error {
+    color: red;
+    margin-top: 5px;
+}
+input.error {
+    border: 1px solid red;
+    color: red;
+}
+select.error {
+    border: 1px solid red;
+    color: red;
+}

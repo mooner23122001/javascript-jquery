@@ -62,110 +62,109 @@
           <h2 class="col text-white">Admissions Form</h2>
           <div class="col"><button type="submit" class="btn border rounded bg-white float-right">Download</button></div>
         </div>
-        <form class="pt-5">
+        <form class="pt-5 text-infor">
           <div class="row">
             <div class="col star">
               <label for="first-name" class="text-info">First Name</label>
-              <input type="text" id="first-name" class="form-control">
+              <input type="text" id="first-name" name="firstname" class="form-control" required>
               <p class="error text-danger" id="error-first-name"></p>
             </div>
             <div class="col star">
               <label for="last-name" class="text-info">Last Name</label>
-              <input type="text" id="last-name" class="form-control" >
+              <input type="text" id="last-name" name="lastname" class="form-control" required>
               <p class="error text-danger" id="error-last-name"></p>
             </div>
           </div>
           <div class="email-form">
             <label for="Email" class="text-info">Email</label>
-            <input type="email" id="Email" class="form-control" required>
+            <input type="email" id="Email" name="email" class="form-control" required>
           </div>
           <div class="birth-date-form star">
             <label for="birth-date-form" class="text-info">Birth Date</label>
-              <input type="date" id="birth-date-form" class="form-control">
+              <input type="date" id="birth-date-form" name="birthday" class="form-control" required>
               <p class="error text-danger" id="error-birth-date"></p>
           </div>
+          <div class="gender py-3 star">
+            <label class="text-info my-1">Gender</label>
+            <div class="form-check">
+              <input class="form-check-input check-box" name="check_box" type="checkbox" value="" id="male" required>
+              <label class="form-check-label label-checkbox" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input check-box" name="check_box" type="checkbox" value="" id="female" required>
+              <label class="form-check-label label-checkbox" for="female">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input check-box" name="check_box" type="checkbox" value="" id="others" required>
+              <label class="form-check-label label-checkbox" for="others">
+                Others
+              </label>
+            </div>
+          </div>
+          <div class="select-section py-3 star">
+            <label class="text-info my-1">Select section</label>
+              <select class="custom-select" name="select_form" id="inputGroupSelect01" required>
+                <option selected>- Select -</option>
+                <option value="1">Section - A</option>
+                <option value="2">Section - B</option>
+                <option value="3">Section - C</option>
+              </select>
+            <p class="error text-danger" id="error-select-section"></p>
+          </div>
+          <div class="apply-class star">
+            <label class="text-info my-1">Apply for Class</label>
+            <div class="form-check">
+              <input class="form-check-input check-radio" type="radio" name="exampleRadios" id="o-radio" value="option1" required>
+              <label class="form-check-label label-radio" for="exampleRadios1">
+                O Level
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input check-radio" type="radio" name="exampleRadios" id="a-radio" value="option2" required>
+              <label class="form-check-label label-radio" for="exampleRadios2">
+                A level
+              </label>
+            </div>
+            <p class="error text-danger" id="error-applyclass"></p>
+          </div>
+          <div class="guardian-1 py-3 star">
+            <label for="guardian-name" class="text-info">Guardian Name</label>
+            <input type="text" id="guardian-name" name="guardian_name" class="form-control" required>
+            <p class="error text-danger" id="error-guardian-name"></p>
+          </div>
+          <div class="guardian-2 pt-3 pb-5 star">
+            <label for="guardian-contact" class="text-info">Guardian Contact no.</label>
+            <input type="" id="guardian-contact" name="guardian_contact" class="form-control" required>
+            <p class="error text-danger" id="error-guardian-contact"></p>
+          </div>
+          <div>
+            <input id="choose-file" type="file" id="formFile">
+        </div>
+        <div class="files-container">
+            <div id="list-file">
+                <!-- <div class="d-flex text-primary">
+                    <p class="px-3">Name: abc</p>
+                    <p class="px-3">Size: 5mb</p>
+                </div> -->
+            </div>
+        </div>
+          <div class="comments pt-5 pb-3">
+            <label for="comments-form" class="text-info">Comments(optional)</label>
+            <input type="text" id="comments-form" class="form-control">
+          </div>
+          <div class="submit-admission py-3">
+            <button class="btn border rounded bg-success text-white float-right py-2 button-submit">Apply for Admission</button>
+          </div>
+        </div>
+      </div>
         </form>
-        <div class="gender py-3 star">
-          <label class="text-info my-1">Gender</label>
-          <div class="form-check">
-            <input class="form-check-input check-box" type="checkbox" value="" id="male">
-            <label class="form-check-label label-checkbox" for="male">
-              Male
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input check-box" type="checkbox" value="" id="female">
-            <label class="form-check-label label-checkbox" for="female">
-              Female
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input check-box" type="checkbox" value="" id="others">
-            <label class="form-check-label label-checkbox" for="others">
-              Others
-            </label>
-          </div>
-          <p class="error text-danger" id="error-gender"></p>
-        </div>
-        <div class="select-section py-3 star">
-          <label class="text-info my-1">Select section</label>
-          <div class="input-group mb-3">
-            <select class="custom-select" id="inputGroupSelect01" >
-              <option selected>- Select -</option>
-              <option value="1">Section - A</option>
-              <option value="2">Section - B</option>
-              <option value="3">Section - C</option>
-            </select>
-          </div>
-          <p class="error text-danger" id="error-select-section"></p>
-        </div>
-        <div class="apply-class star">
-          <label class="text-info my-1">Apply for Class</label>
-          <div class="form-check">
-            <input class="form-check-input check-radio" type="radio" name="exampleRadios" id="o-radio" value="option1">
-            <label class="form-check-label label-radio" for="exampleRadios1">
-              O Level
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input check-radio" type="radio" name="exampleRadios" id="a-radio" value="option2">
-            <label class="form-check-label label-radio" for="exampleRadios2">
-              A level
-            </label>
-          </div>
-          <p class="error text-danger" id="error-applyclass"></p>
-        </div>
-        <div class="guardian-1 py-3 star">
-          <label for="guardian-name" class="text-info">Guardian Name</label>
-          <input type="text" id="guardian-name" class="form-control" >
-          <p class="error text-danger" id="error-guardian-name"></p>
-        </div>
-        <div class="guardian-2 pt-3 pb-5 star">
-          <label for="guardian-contact" class="text-info">Guardian Contact no.</label>
-          <input type="number" id="guardian-contact" class="form-control" >
-          <p class="error text-danger" id="error-guardian-contact"></p>
-        </div>
-        <div>
-          <input id="choose-file" type="file" id="formFile">
-      </div>
-      <div class="files-container">
-          <div id="list-file">
-              <!-- <div class="d-flex text-primary">
-                  <p class="px-3">Name: abc</p>
-                  <p class="px-3">Size: 5mb</p>
-              </div> -->
-          </div>
-      </div>
-        <div class="comments pt-5 pb-3">
-          <label for="comments-form" class="text-info">Comments(optional)</label>
-          <input type="text" id="comments-form" class="form-control">
-        </div>
-        <div class="submit-admission py-3">
-          <button class="btn border rounded bg-success text-white float-right py-2 button-submit">Apply for Admission</button>
-        </div>
-      </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="testjquery.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <!-- <script src="testjquery.js"></script> -->
+    <script src="validate1.js"></script>
 </body>
 </html>
